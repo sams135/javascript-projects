@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .red-background {
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+  
+
+  <button id="changeColorBtn">Change Background Color</button>
+
+  <input type="text" id="textBox" placeholder="Enter at least 4 characters">
+    <button id="submitButton">Submit</button>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+    $('#changeColorBtn').click(function() {
+        $(this).addClass('red-background');
+    });
+});
+
+
+$(document).ready(function() {
+    $('#submitButton').click(function() {
+        var enteredText = $('#textBox').val();
+        if (enteredText.length >= 4) {
+            alert('Text entered is valid!');
+            // Here you can perform further actions if the text is valid
+        } else {
+            alert('Text should contain at least 4 characters!');
+        }
+    });
+});
+
+
+
+</script>
+
+</body>
+</html>

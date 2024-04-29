@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Rock Paper Scissors</p>
+  <button onclick="
+  playgame('Rock')
+  ">Rock</button>
+
+
+  <button onclick=" 
+  playgame('Paper')
+
+  
+  ">Paper</button>
+
+    
+    <button onclick="
+   playgame('Scissors');
+
+  ">Scissors</button>
+    
+
+  
+
+
+
+
+  <script>
+    function playgame(playermove){
+
+      const computermove=pickmove();
+
+      let result = ''
+
+        if (playermove ==='Scissors'){
+          if (computermove === 'Rock')
+      {
+        result = 'you lose .so sad(ha hha hha ha) ';
+      }else if(computermove === 'Paper')
+
+      {
+        result = 'you win laaalaaalalaala';
+      }
+      else if (computermove === 'Scissors')
+      {
+        result= 'tieeeeeeeeyee';
+      }
+
+        }else if (playermove === 'Paper'){
+          if (computermove === 'Rock')
+      {
+        result = 'win ha hha hha ha ';
+      }else if(computermove === 'Paper')
+
+      {
+        result = 'tieeee';
+      }
+      else if (computermove === 'Scissors')
+      {
+        result= 'you lose hu hhu hhu hu';
+      }
+        }else if(playermove === 'Rock'){
+
+          if (computermove === 'Rock')
+  {
+    result = 'tie ha hha hha ha ';
+      }else if(computermove === 'Paper')
+
+      {
+        result = 'you lose';
+      }
+      else if (computermove === 'Scissors')
+      {
+        result = 'you win';
+      }
+
+        }
+
+        
+      
+  
+
+      alert(`you picked ${playermove}. Computer picked ${ computermove}.${result}.`);
+        }
+
+    function pickmove(){
+      const randomnumber = Math.random();
+      let computermove =''
+        if (randomnumber>=0 && randomnumber < 1 / 3)
+        {
+          computermove='Rock'
+
+        }
+        else if (randomnumber>=1 / 3 && randomnumber < 2 / 3)
+        {
+          computermove='Paper'
+
+        }
+        else if (randomnumber>=2 / 3 && randomnumber < 1 )
+        {
+          computermove='Scissors'
+
+        }
+
+        return computermove;
+    }
+  </script>
+</body>
+</html>

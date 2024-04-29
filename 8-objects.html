@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+ 
+  <script>
+    function issame(pro1,pro2){
+if (pro1.name===pro2.name && pro1.price===pro2.price)
+{
+  return true;
+
+} else {
+  return false;
+}
+    }
+
+    const pro1 = {
+      name:'arjun',
+      price:'infifnity'
+    }
+    const pro2 = {
+      name:'arjun',
+      price:'infifnity'
+    }
+
+    console.log(issame(pro1,pro2));
+
+    const name= 'arjun'
+    const mine = name.toUpperCase()
+    console.log(mine.toLowerCase())
+
+    const name1 = pro1.name.repeat(10);
+    console.log(name1)
+  </script>
+</body>
+</html>
